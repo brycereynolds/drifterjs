@@ -191,7 +191,7 @@ class Drifter
   # Prepackaged default effects - save the user some time with defaults
   effect: (effect) ->
     switch effect
-      when "baloon"
+      when "balloon"
         {
           varianceChance      : 100,
           divisionPercentage  : 0.15,

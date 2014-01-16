@@ -175,7 +175,7 @@ Drifter = (function() {
 
   Drifter.prototype.effect = function(effect) {
     switch (effect) {
-      case "baloon":
+      case "balloon":
         return {
           varianceChance: 100,
           divisionPercentage: 0.15,
