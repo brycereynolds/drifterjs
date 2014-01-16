@@ -1,7 +1,7 @@
 drifterjs
 =========
 
-Simple javascript object that let's you move items around the screen with a little more flair.
+Object movement using LERP and effects!
 
 In the current demo just run index.html and click the icon to start. In the source you can see how to begin tweaking the configuration options. For convenience dots that are using variance (when they are off of the standard bearing they exhibit variance) will be colored green while dots on the bearing line to the destination are black.
 
@@ -13,7 +13,7 @@ More details to follow...
     // the next element will start to fade in.
 
     var drifter = new Drifter(".demoOne", {
-        effect  : "baloon",
+        effect  : "balloon",
         parent  : $('.container'),
         end     : {top: 200, left: 200},
         varianceBoundary : 75,
