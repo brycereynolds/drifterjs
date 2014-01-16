@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="index,follow"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Drifterjs Demo</title>
+
+    <script type="text/javascript" src="vendor/jquery.js"></script>
+    <script type="text/javascript" src="js/drifter.js"></script>
+
+    <style type="text/css">
+    .container{
+        position: relative;
+        border: 1px solid #999;
+        background: #666;
+        width: 800px;
+        height: 800px;
+    }
+
+    #startBaloon{
+        cursor: pointer;
+        width: 50px;
+        color: #FFF;
+        text-align: center;
+        font-family: Helvetica;
+    }
+
+    .demoOne{
+        background: black;
+        height: 20px;
+        width: 20px;
+        border-radius: 3px;
+        position: absolute;
+        top: 800px;
+        left: 600px;
+    }
+
+    .demoOne.variance{
+        background: #83c000;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h2>Drifter Demo</h2>
+    </header>
+
+    <div class="container">
+
+        <div id="startBaloon" class="demoOne">Click</div>
+
+    </div>
+
+
+</body>
+<script type="text/javascript">
+
+    var drifter = new Drifter(".demoOne", {
+        effect  : "balloon", // try changing to "speedy_trails" to see a different effect
+        parent  : $('.container'),
+        end     : {top: 200, left: 200},
+
+        // These are commented b/c we are using a packaged effect "balloon" which sets
+        // these different variables. They are here for referrence.
+
+        // varianceBoundary : 75, // how much will the dots move away from bearing
+        // effectPace: 800, // ms at which dots are placed
+        // divisionPercentage: 100 // 1 - 100 value dictates how often dots will stray from bearing
+    });
+
+    $("#startBaloon").on('click', function(){
+        $(this).fadeOut(500, $.proxy(function(){
+            $(this).text(''); // do not want to clone this text
+            drifter.start($(this));
+        }, this));
+    });
+
+    </script>
+</html>

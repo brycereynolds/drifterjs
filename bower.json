@@ -1,0 +1,16 @@
+{
+    "name": "drifterjs",
+    "version": "0.0.1",
+    "main": "js/drifter.js",
+    "author": "brycereynolds",
+    "ignore": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "js/drifter.coffee",
+        "component.json",
+        "index.html"
+    ],
+    "dependencies": {
+        "jquery": ">= 1.9.0"
+    }
+}
